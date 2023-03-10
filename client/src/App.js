@@ -8,7 +8,7 @@ function App() {
   let [students,setStudents] = useState([]);
 
   let getCricketers = async()=>{
-     let responce = await axios.get("http://localhost:1234/indianCricketers")
+     let responce = await axios.get("/indianCricketers")
 
      setCricketers(responce.data);
      console.log(responce.data);
@@ -16,7 +16,7 @@ function App() {
 
   let getUsersFromAtlas = async()=>{
 
-    let response = await axios.get("http://localhost:1234/getUsers");
+    let response = await axios.get("/getUsers");
 
     setStudents(response.data)
 
